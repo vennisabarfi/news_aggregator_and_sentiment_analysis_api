@@ -110,7 +110,6 @@ router.get('/database/column', function(req,res){
     }
 })
 
-// add the one where this one is generalized,then do update and delete, ordering and grouping
 // filter/group by category(tech, world news, us news, culture and arts etc.)
 router.get('database/column/category', function(req,res){
     try{
@@ -123,7 +122,6 @@ router.get('database/column/category', function(req,res){
         res.status(500).send(error);
     }
 })
-// get back to selecting notifications for users and how they can order using a job scheduler
 
 // User can look up headlines
 router.get('database/headline', async function(req,res){
