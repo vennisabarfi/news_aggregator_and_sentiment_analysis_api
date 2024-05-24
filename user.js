@@ -38,12 +38,12 @@ const sequelize = new Sequelize('user_database', 'username', 'password', {
                 return bcrypt.compare(password, this.password);
             }
         }
-      },
-      {
-          sequelize, // passing the connection instance
-          modelName: 'User'
-      }
-  )
+      });
+
+      return User;
+
+
+ 
   
   //defined model is the class itself
   console.log(User == sequelize.models.User); //true
