@@ -145,6 +145,9 @@ news_aggregator_api/
 ├── package.json
 └── server.js
 ```
+[![Python](https://img.shields.io/badge/Python-Used-blue)](https://www.python.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-Used-yellow)](https://www.javascript.com/)
+
 
 ## Contributing
 Contributions are welcome! Please submit a pull request or open an issue to discuss potential changes.
