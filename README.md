@@ -1,6 +1,4 @@
-Here's the updated README file to reflect the new file structure of your project:
 
----
 
 # News Aggregator and Sentiment Analysis API
 
@@ -154,6 +152,4 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
 
-Feel free to customize this README further to fit your specific needs and to reflect any additional information about your project.
