@@ -31,7 +31,7 @@ sentimentData.init(
             allowNull: false,
         },
         Confidence:{ 
-            type: DataTypes.DECIMAL, 
+            type: DataTypes.FLOAT, 
         },
         
 
@@ -73,22 +73,27 @@ syncAndInsertData();
 
 // Queries on database
 //get headline,sentiment, confidence information by clicking headline
-router.get('/sentiment/headline', async function(req,res){
+router.get('/sentiment/headline', async function(req, res) {
     try {
-        const headline = req.query.keyword;
-    response = await sentimentData.findAll({
-        where:{
-            content:{
-                [Op.like] : `%${headline}%`
-            }
+        const { headline } = req.query; // Correctly extract the headline query parameter
+        if (!headline) {
+            return res.status(400).send('Headline query parameter is required.');
         }
-        
-    })
-        res.send(response)
+
+        const response = await sentimentData.findOne({
+            where: { headline }
+        });
+
+        if (response) {
+            res.json(response);
+        } else {
+            res.status(404).send('Headline not found.');
+        }
     } catch (error) {
-        res.status(500).send(`An error occurred while loading results. Error message here: ${error}`);
+        res.status(500).send(`An error occurred while loading results. Error message: ${error.message}`);
         console.log(error);
     }
-})
+});
+
 
 module.exports = router;

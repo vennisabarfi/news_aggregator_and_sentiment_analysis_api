@@ -9,7 +9,7 @@ const sequelize = new Sequelize('user_database', 'username', 'password', {
     dialect: 'mysql'
   });
   
-  // fix this and then work on creating a database schema for authRouter
+
   class User extends Model{}
   User.init( 
   
