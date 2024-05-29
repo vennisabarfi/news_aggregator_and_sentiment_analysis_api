@@ -1,3 +1,6 @@
+Here's the updated README file to reflect the new file structure of your project:
+
+---
 
 # News Aggregator and Sentiment Analysis API
 
@@ -11,6 +14,7 @@ This project performs sentiment analysis on news articles using the Hugging Face
 - [Database Schema](#database-schema)
 - [Sentiment Analysis](#sentiment-analysis)
 - [Tools and Languages](#tools-and-languages)
+- [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -121,8 +125,35 @@ By integrating this AI model, the project can provide insights into the general 
   - **Python**: transformers for sentiment analysis, json for JSON parsing
 - **Development Tools**: Git for version control
 
+## Project Structure
+```
+news_aggregator_api/
+├── authController/
+│   ├── authRouter.js
+│   ├── file.txt
+│   └── user.js
+├── newsController/
+│   ├── News_Category_Dataset_v3.json
+│   ├── json_converter.py
+│   └── news_database.js
+│   ├── news_dataset.json
+├── sentimentController/
+│   ├── sentiment.js
+│   ├── sentiment_analysis.py
+│   └── sentiment_results.json
+├── .gitignore
+├── README.md
+├── package-lock.json
+├── package.json
+└── server.js
+```
+
 ## Contributing
 Contributions are welcome! Please submit a pull request or open an issue to discuss potential changes.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Feel free to customize this README further to fit your specific needs and to reflect any additional information about your project.
