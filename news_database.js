@@ -15,7 +15,7 @@ fs.readFile(file_path, 'utf8', function(err,data){
 // Schema for accessing database
 const {Sequelize, DataTypes, Model} = require('sequelize');
 // initialize database without password / with blank password
-const sequelize = new Sequelize('database', 'username', 'password', {
+const sequelize = new Sequelize('news_database', 'username', 'password', {
   host: 'localhost',
   dialect: 'mysql'
 });
@@ -162,7 +162,7 @@ router.get('/database/date', async function(req,res){
 
     // Validate user date inputs
     if (!startDate || !endDate){
-        return res.status(500).json({message: `Please provide both a start date and end date. Error: ${error}`});
+        return res.status(400).json({message: `Please provide both a start date and end date. Error: ${error}`});
 
     }
     try{
